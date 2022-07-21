@@ -15,6 +15,10 @@ html{
   font-size: 62.5%;
 }
 
+.none{
+  display: none;
+}
+
 html, body {
   background-color: #3d0802;
   height: 100vh;
@@ -262,6 +266,8 @@ h3 {
 }
 
 /*media queries*/
+
+
 @media (max-width: 1024px){
   html{
     font-size: 50%;
@@ -295,39 +301,45 @@ h3 {
   }
 }
 
-
-
 @media (max-width: 425px){
-  header {
-    text-align: center;
-}
+  
+    header {
+      text-align: center;
+  }
+  
+    header .container {
+        display: block;
+  }
+  
+    main {
+    padding: 0 0 0 45px;
+  }
+  
+    * {
+    padding: 0 0 4px 0;
+  }
+  
+  .hero .container img{
+    order: -1;
+    width: 80%;
+    padding: 0 0 0 85px;
+  }
+  }
 
-  header .container {
-      display: block;
-}
-
-  main {
-  padding: 0 0 0 45px;
-}
-
-  * {
-  padding: 0 0 4px 0;
-}
-
-.hero .container img{
-  order: -1;
-  width: 80%;
-  padding: 0 0 0 85px;
-}
-}
 
 @media (max-width: 375px){
-  
-  header .menu-toggle{
-    color: #FFF;
-    font-size: 16px;
+  .none{
+    display: none;
   }
+  
+
+  .menu-section label{
+    display: block;
+
+  }
+  
    header .menu-section{
+    display: block;
     width: 100%
   }
   header .container {
@@ -340,15 +352,28 @@ h3 {
     flex-direction: column;
     width: 100%;
   }
-   header nav ul li, .menu-toggle{
+   header nav ul li{
     min-height: 80px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  header nav ul li, .menu-toggle{
-    background-color: #bd0006;
+  header nav ul li{
+    background-color: #8b2e24;
+  }
+  label{
+    height: 80px;
+    background-color: #8b2e24;
+    color: #fff;
+    width: 100;
+    z-index: 99;
+    padding: 30px; 
+
+  }
+
+  input{
+   display: none;
   }
   nav ul{
     display: none!important;
@@ -359,7 +384,8 @@ h3 {
   }
 
   * {
-    padding: 0 0 0px 0;
+    font-size: 2.0rem;
+    padding: 0 0 8px 0;
   }
   main {
     padding: 0 0 0 15px;
@@ -380,3 +406,4 @@ h3 {
   }
 
 }
+
