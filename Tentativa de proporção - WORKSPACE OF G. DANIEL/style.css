@@ -261,8 +261,6 @@ h3 {
   margin: 20px 8px 10px;
 }
 
-/*aterar os grids: 34:52*/
-
 /*media queries*/
 @media (max-width: 1024px){
   html{
@@ -324,8 +322,40 @@ h3 {
 }
 
 @media (max-width: 375px){
-  header nav ul{
-    display: none;
+  
+  header .menu-toggle{
+    color: #FFF;
+    font-size: 16px;
+  }
+   header .menu-section{
+    width: 100%
+  }
+  header .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+  }
+ header nav ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+   header nav ul li, .menu-toggle{
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav ul li, .menu-toggle{
+    background-color: #bd0006;
+  }
+  nav ul{
+    display: none!important;
+  }
+  .input-menu-all:checked ~ nav ul {
+    display: block !important;
+    
   }
 
   * {
